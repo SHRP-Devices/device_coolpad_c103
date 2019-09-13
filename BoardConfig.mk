@@ -68,7 +68,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 RECOVERY_VARIANT := twrp
-TW_THEME := shrp_portrait_hdpi
+TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -78,7 +78,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
-TW_USE_TOOLBOX := true
+TW_USE_BUSYBOX := true
 TW_OREO_MR1_F2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_NTFS_3G := true
