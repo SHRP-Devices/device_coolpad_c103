@@ -39,13 +39,29 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 TARGET_USES_64_BIT_BINDER := true
 
-# Kernel
+# Prebuild Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
 TARGET_PREBUILT_KERNEL := device/coolpad/c103/prebuilt/Image.gz-dtb
+
+
+# Kernel Source
+#BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci earlyprintk loop.max_part=7
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+#BOARD_KERNEL_BASE := 0x80000000
+#BOARD_KERNEL_PAGESIZE := 2048
+#BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
+#BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+
+#TARGET_KERNEL_ARCH := arm64
+#TARGET_KERNEL_HEADER_ARCH := arm64
+
+#TARGET_KERNEL_SOURCE := kernel/coolpad/msm8976
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+#TARGET_KERNEL_CONFIG := lineage_c106_defconfig
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -88,10 +104,16 @@ TW_USE_TOOLBOX := true
 TW_OREO_MR1_F2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_NTFS_3G := true
+TW_SKIP_COMPATIBILITY_CHECK := true
 
 #Ignore Missing Dependencies
 ALLOW_MISSING_DEPENDENCIES=true
 
+#VIRTUAL WATCH FLAGS
+#TW_X_OFFSET := 340
+#TW_Y_OFFSET := 1120
+#TW_W_OFFSET := -630
+#TW_H_OFFSET := -1120
 
 #SHRP_Variables
 SHRP_PATH := device/coolpad/c103
@@ -105,6 +127,12 @@ SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A-Only
 SHRP_FLASH := 1
+SHRP_EXPRESS := true
+SHRP_OFFICIAL := true
+SHRP_DARK := true
+#SHRP_EXCLUDE_AUTO_DECRYPT := true
+#SHRP_ALT_REBOOT := true
+#SHRP_NOTCH := true
 #SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
 #SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 #SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
