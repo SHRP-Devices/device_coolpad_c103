@@ -130,10 +130,47 @@ SHRP_FLASH := 1
 SHRP_EXPRESS := true
 SHRP_OFFICIAL := true
 SHRP_DARK := true
-#SHRP_EXCLUDE_AUTO_DECRYPT := true
 #SHRP_ALT_REBOOT := true
 #SHRP_NOTCH := true
 #SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
 #SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 #SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
 #SHRP_FLASH_MAX_BRIGHTNESS := 200
+#SHRP_STATUSBAR_RIGHT_PADDING := 20
+#SHRP_STATUSBAR_LEFT_PADDING := 20
+#SHRP_AB := true
+
+#NEWFLAGS
+
+# Setting up custom addons folder
+SHRP_EXTERNAL_ADDON_PATH := "device/coolpad/c103/prebuilt/"
+
+# Added treblize addon
+SHRP_EXTERNAL_ADDON_1_NAME := "Add treble compatibility"
+SHRP_EXTERNAL_ADDON_1_INFO := "This patch will add treble compatibility to your device. Before doing this operation wipe your system partition. Do carefully"
+SHRP_EXTERNAL_ADDON_1_FILENAME := "treblize.zip"
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Confirm"
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Treblized"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
+
+# Added detreblize addon
+SHRP_EXTERNAL_ADDON_2_NAME := "Remove treble compatibility"
+SHRP_EXTERNAL_ADDON_2_INFO := "This patch will remove treble compatibility from your device. Before doing this operation wipe system and vendor partition. Do carefully"
+SHRP_EXTERNAL_ADDON_2_FILENAME := "detreblize.zip"
+SHRP_EXTERNAL_ADDON_2_BTN_TEXT := "Confirm"
+SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT := "Detreblized"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_2 := true
+
+# Including Magisk into recovery ramdisk
+INC_IN_REC_MAGISK := true
+
+# Including default addons into recovery ramdisk
+INC_IN_REC_ADDON_1 := true
+INC_IN_REC_ADDON_2 := true
+INC_IN_REC_ADDON_3 := true
+INC_IN_REC_ADDON_4 := true
+
+#SHRP_SKIP_DEFAULT_ADDON_4 := true
+
+SHRP_NO_SAR_AUTOMOUNT := true
+
