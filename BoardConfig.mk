@@ -14,15 +14,15 @@
 # limitations under the License.
 #
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := c103
+TARGET_OTA_ASSERT_DEVICE := oppo-a37f
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8952
+TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8952
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
+TARGET_BOARD_PLATFORM := msm8916
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
 
 # Architecture
 TARGET_ARCH := arm64
@@ -45,7 +45,7 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
-TARGET_PREBUILT_KERNEL := device/coolpad/c103/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/oppo/a37f/prebuilt/Image.gz-dtb
 
 
 # Kernel Source
@@ -59,7 +59,7 @@ TARGET_PREBUILT_KERNEL := device/coolpad/c103/prebuilt/Image.gz-dtb
 #TARGET_KERNEL_ARCH := arm64
 #TARGET_KERNEL_HEADER_ARCH := arm64
 
-#TARGET_KERNEL_SOURCE := kernel/coolpad/msm8976
+#TARGET_KERNEL_SOURCE := kernel/oppo/msm8916
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 #TARGET_KERNEL_CONFIG := lineage_c106_defconfig
 
@@ -116,7 +116,7 @@ ALLOW_MISSING_DEPENDENCIES=true
 #TW_H_OFFSET := -1120
 
 #SHRP_Variables
-SHRP_PATH := device/coolpad/c103
+SHRP_PATH := device/oppo/a37f
 SHRP_MAINTAINER := epicX
 SHRP_DEVICE_CODE := c103
 SHRP_EDL_MODE := 1
@@ -144,7 +144,7 @@ SHRP_DARK := true
 #NEWFLAGS
 
 # Setting up custom addons folder
-SHRP_EXTERNAL_ADDON_PATH := "device/coolpad/c103/prebuilt/"
+SHRP_EXTERNAL_ADDON_PATH := "device/oppo/a37f/prebuilt/"
 
 # Added treblize addon
 SHRP_EXTERNAL_ADDON_1_NAME := "Add treble compatibility"
