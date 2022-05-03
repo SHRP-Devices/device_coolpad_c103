@@ -4,6 +4,6 @@ Full Compilation
 
         $ . build/en*
 
-        $ lunch omni_c103-eng
+        $ lunch omni_a37f-eng
 
 	$ mka recoveryimage
