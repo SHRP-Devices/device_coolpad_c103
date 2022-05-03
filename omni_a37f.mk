@@ -21,8 +21,8 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_c103
-PRODUCT_DEVICE := c103
-PRODUCT_BRAND := coolpad
-PRODUCT_MANUFACTURER := Coolpad
-PRODUCT_MODEL := Coolpad Cool 1 Dual
+PRODUCT_NAME := omni_a37f
+PRODUCT_DEVICE := a37f
+PRODUCT_BRAND := oppo
+PRODUCT_MANUFACTURER := Oppo
+PRODUCT_MODEL := Oppo A37f
